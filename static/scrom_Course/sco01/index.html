@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>scorm</title>
+	<meta name = "viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="../common/css/style.css" />
+
+	<script src="../config/config.js"></script>
+	<script src="../common/APIWrapper.js"></script>
+	<script src="../common/SCOFunctions.js"></script>
+	<script src="../common/scormapi.js"></script>
+	<script src="../common/videoplayer.js"></script>
+	<script src="../common/app.js"></script>
+	<script src="src/config.js"></script>
+</head>
+<body>
+	<div id="video-box">
+		<div id="video-title"></div>
+		<div id="video-content">
+			
+		</div>
+		<div class="v-controls">
+			<button class="btn-play play" id="btn-play">
+				<svg class="btn-icon-pause" height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+					<path class="v-svg-fill" d="M 12,26 16,26 16,10 12,10 z M 21,26 25,26 25,10 21,10 z"></path>
+				</svg>
+				<svg class="btn-icon-play" height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+					<path class="v-svg-fill" d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path>
+				</svg>
+			</button>
+			<div class="v-progress-container" id="v-progress-container">
+				<div class="v-progress-bar" id="v-progress-current"></div>
+			</div>
+			<div class="v-time">
+				<span class="v-time-current" id="v-time-current">--:--</span>
+				<span class="v-time-separator"> / </span>
+				<span class="v-time-duration" id="v-time-duration">--:--</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+/*
+ * @Author: chunyan wang 
+ * @Purpose: 主题
+ */
+
+$main: #ff2d50;
+$black: #3b3b3b;
+$basic: #71777d;
+@each $name,
+$color in (main:$main, black:$black, basic:$basic) {
+  .cr-#{$name} {
+    color: $color
+  }
+  .bcr-#{$name} {
+    background-color: $color
+  }
+}

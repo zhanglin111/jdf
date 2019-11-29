@@ -1,0 +1,260 @@
+html {
+	background: #000;
+    font-family: Roboto,Arial,Helvetica,sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+
+#video-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 800;
+    padding: .4em 2em;
+    padding-right: 4em;
+    text-align: center;
+    /*box-shadow: 0 1px 0px rgba(255,255,255, 0.3);*/
+    /*border-bottom: 1px solid #757575;*/
+    border-left: 5px solid #8e8e8e;
+    background: rgba(0,0,0,0.6);
+    background: linear-gradient(to right, #676767 0%, rgba(230,230,230, 0) 100%);
+    background: -webkit-linear-gradient(to right, #676767 0%, rgba(230,230,230, 0) 100%);
+    background: -moz-linear-gradient(to right, #676767 0%, rgba(230,230,230, 0) 100%);
+    background: -o-linear-gradient(to right, #676767 0%, rgba(230,230,230, 0) 100%);
+    background: -ms-linear-gradient(to right, #676767 0%, rgba(230,230,230, 0) 100%);
+}
+
+.v-controls {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	z-index: 1000;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #0d0d0d 0%, #171717 49%, #212121 51%, #000 100%);
+    background: -webkit-linear-gradient(to bottom, #0d0d0d 0%, #171717 49%, #212121 51%, #000 100%);
+    background: -moz-linear-gradient(to bottom, #0d0d0d 0%, #171717 49%, #212121 51%, #000 100%);
+    background: -o-linear-gradient(to bottom, #0d0d0d 0%, #171717 49%, #212121 51%, #000 100%);
+    background: -ms-linear-gradient(to bottom, #0d0d0d 0%, #171717 49%, #212121 51%, #000 100%);
+    border-top: 1px solid #424242;
+}
+
+.btn-play{
+	float: left;
+	width: 5%;
+    border: 0;
+    height: 100%;
+    padding: 0;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.btn-play:hover {
+    background: #424242;
+}
+
+.btn-play:active, .btn-play:visited, .btn-play:focus {
+    background: transparent;
+}
+
+.btn-play .v-svg-fill {
+    fill: #fff;
+}
+
+.btn-play.play .btn-icon-pause{
+    display: none;
+}
+
+.btn-play.play .btn-icon-play{
+    display: block;
+}
+
+.btn-play.pause .btn-icon-pause{
+    display: block;
+}
+
+.btn-play.pause .btn-icon-play{
+    display: none;
+}
+
+.v-progress-container {
+    position: relative;
+	float: left;
+	width: 85%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #808080;
+    background: linear-gradient(to bottom, #757474 0%, #868585 50%, #7f7d7d 51%, #737373 100%);
+    background: -webkit-linear-gradient(to bottom, #757474 0%, #868585 50%, #7f7d7d 51%, #737373 100%);
+    background: -moz-linear-gradient(to bottom, #757474 0%, #868585 50%, #7f7d7d 51%, #737373 100%);
+    background: -o-linear-gradient(to bottom, #757474 0%, #868585 50%, #7f7d7d 51%, #737373 100%);
+    background: -ms-linear-gradient(to bottom, #757474 0%, #868585 50%, #7f7d7d 51%, #737373 100%);
+    cursor: pointer;
+}
+
+.v-progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #efefef;
+    background: linear-gradient(to bottom, #efefef 0%, #f1f1f1 50%, #dcdada 51%, #e6e6e6 100%);
+    background: -webkit-linear-gradient(to bottom, #efefef 0%, #f1f1f1 50%, #dcdada 51%, #e6e6e6 100%);
+    background: -moz-linear-gradient(to bottom, #efefef 0%, #f1f1f1 50%, #dcdada 51%, #e6e6e6 100%);
+    background: -o-linear-gradient(to bottom, #efefef 0%, #f1f1f1 50%, #dcdada 51%, #e6e6e6 100%);
+    background: -ms-linear-gradient(to bottom, #efefef 0%, #f1f1f1 50%, #dcdada 51%, #e6e6e6 100%);
+}
+
+.v-time{
+	float: left;
+	width: 10%;
+    font-size: .9em;
+    text-align: center;
+    line-height: 30px;
+    color: #ddd;
+    white-space: nowrap;
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .btn-play {
+        width: 10%;
+    }
+
+    .v-progress-container{
+        width: 75%;
+    }
+
+    .v-time {
+        width: 15%;
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .btn-play {
+        width: 10%;
+    }
+
+    .v-progress-container{
+        width: 75%;
+    }
+
+    .v-time {
+        width: 15%;
+    }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  .btn-play {
+        width: 10%;
+    }
+
+    .v-progress-container{
+        width: 75%;
+    }
+
+    .v-time {
+        width: 15%;
+    }
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  .btn-play {
+        width: 10%;
+    }
+
+    .v-progress-container{
+        width: 70%;
+    }
+
+    .v-time {
+        width: 20%;
+    }
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  .btn-play {
+        width: 15%;
+    }
+
+    .v-progress-container{
+        width: 55%;
+    }
+
+    .v-time {
+        width: 30%;
+    }
+  
+}
+
+
+/**
+ * small screen
+ */
+@media (max-width: 320px) {
+    .btn-play {
+        width: 15%;
+    }
+
+    .v-progress-container{
+        width: 50%;
+    }
+
+    .v-time {
+        width: 35%;
+    }
+}
